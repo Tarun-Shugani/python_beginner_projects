@@ -20,7 +20,7 @@ def hangman():
     num1 = random.randint(0, length-2)
     num2 = random.randint(0, length-2)
 
-    word_start = [word[num1] and word[num2] if word[num1] in word and word[num2] in word else '-' for word_letters in word]
+    word_start = [word[num1] if word[num1] in word_letters else '-' for word_letters in word]
     print('Current word: ', ' '.join(word_start))
     lives = 6
 
